@@ -1,0 +1,41 @@
+{
+  "name": "browserify-seed",
+  "version": "0.8.2",
+  "description": "seed for a browserified version of famous",
+  "main": "src/index.js",
+  "repository": "https://github.com/Famous/browserify-seed/",
+  "browserify": {
+    "transform": [
+      "famousify",
+      "cssify",
+      "brfs"
+    ]
+  },
+  "scripts": {
+    "start": "npm run build && serve public/ -p 1337",
+    "start-dev": "npm run watch & serve public/ -p 1337",
+    "test": "npm run lint -s && npm run build",
+    "build": "browserify src/index.js | uglifyjs > public/bundle.js",
+    "watch": "watchify src/index.js -o public/bundle.js --debug --verbose",
+    "lint-eslint": "eslint src/",
+    "lint-jscs": "jscs src/",
+    "lint": "npm run lint-eslint && npm run lint-jscs"
+  },
+  "devDependencies": {
+    "browserify": "^8.0.3",
+    "eslint": "^0.12.0",
+    "jscs": "^1.7.3",
+    "serve": "^1.4.0",
+    "uglify-js": "^2.4.15",
+    "watchify": "^2.1.0"
+  },
+  "author": "TheAlphaNerd",
+  "license": "ISC",
+  "dependencies": {
+    "brfs": "^1.2.0",
+    "cssify": "^0.6.0",
+    "famous": "^0.3.5",
+    "famous-polyfills": "^0.3.0",
+    "famousify": "^0.1.5"
+  }
+}
