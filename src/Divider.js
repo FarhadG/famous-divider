@@ -9,6 +9,7 @@ var Transform = require('famous/core/Transform');
 var ImageSurface = require('famous/surfaces/ImageSurface');
 var ContainerSurface = require('famous/surfaces/ContainerSurface');
 var Transitionable = require('famous/transitions/Transitionable');
+var multiplyTransforms = require('./helpers').multiplyTransforms;
 var Easing = require('famous/transitions/Easing');
 
 
@@ -40,7 +41,7 @@ function _initDebugBackground() {
 
         var background = new Surface({
             properties: {
-                background: '#111',
+                background: 'black',
                 border: '1px dashed green',
                 zIndex: '-9999999'
             }
@@ -59,18 +60,6 @@ function _getOffset(column, row) {
         x: column * this.options.appWidth / this.options.column,
         y: row * this.options.appHeight / this.options.row
     };
-}
-
-
-/*
- *  Helper function to multiply as many transforms together
- */
-function _multiplyTransforms() {
-    var result = arguments[0];
-    for(var i = 1; i < arguments.length; i++) {
-        result = Transform.multiply(result, arguments[i]);
-    }
-    return result;
 }
 
 
@@ -103,7 +92,7 @@ function _initContainers() {
                 transform: function(offset) {
                     if (this.options.badass) {
                         var translateZ = (offset.x + 1) * (offset.y + 1) * 0.000001 * Math.sin(Date.now() * 0.001)
-                        return _multiplyTransforms(
+                        return multiplyTransforms(
                             Transform.translate(offset.x, offset.y, translateZ * 500 - 600),
                             Transform.rotateY(0)
                         );

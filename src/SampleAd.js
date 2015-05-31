@@ -30,10 +30,19 @@ Ad.DEFAULT_OPTIONS = {};
  */
 function _initSampleAd() {
 
-    var circle = new Surface({
-        size: [200, 200],
+    var background = new ImageSurface({
+        content: './images/McKinsey_%26_Company_logo.png',
         properties: {
-            background: 'red',
+            backgroundSize: 'cover'
+        }
+    });
+
+    this.add(background);
+
+    var circle = new Surface({
+        size: [100, 100],
+        properties: {
+            background: 'white',
             borderRadius: '50%'
         }
     });
