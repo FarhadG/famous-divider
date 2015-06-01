@@ -22,21 +22,23 @@ context.setPerspective(1000);
 
 
 /*
- *  A flipper class that has two container surfaces
- *  with transitionables passed down into both and
- *  some other basic options
+ *  The Famo.us Divider instantiation that takes is various
+ *  inputs for configuring your app with
  */
 var divider = new Divider({
+    // Your app
     app: SampleAd,
+    // Width and height for the app
     appWidth: window.innerWidth,
     appHeight: window.innerHeight,
+    // Controllers that are passed down to keep your app in sync
     transitionables: controllers.transitionables,
     // Number of rows and columns to divide your app
     column: 5,
     row: 5,
     // Debugger view for showing the divides cutout
     debug: true,
-    // Sample modifier showing the power of the divider
+    // Sample modifier showing the power of the Famo.us Divider
     badass: true
 });
 
