@@ -25,7 +25,7 @@ Once you've installed all of the dependencies and issued the command `npm run st
 
 Go to the `src` directory and find `index.js` for the entry file. You will, then, see the simple API to instantiante your app with the Famou.us Divider:
 
-```
+```javascript
 /*
  *  The Famo.us Divider instantiation that takes is various
  *  inputs for configuring your app with
