@@ -50,8 +50,8 @@ var spinningModifier = new Modifier({
     transform: function() {
         return multiplyTransforms(
             Transform.rotateX(Math.sin(Date.now() * 0.0001) * 0.3),
-            Transform.rotateY(Math.sin(Date.now() * 0.0009) * 0.3),
-            Transform.rotateZ(Math.sin(Date.now() * 0.0006) * 0.3)
+            Transform.rotateY(Math.cos(Date.now() * 0.0009) * 0.3),
+            Transform.rotateZ(Math.cos(Date.now() * 0.0006) * 0.3)
         );
     }
 });

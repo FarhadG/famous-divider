@@ -91,9 +91,9 @@ function _initContainers() {
                 size: [width, height],
                 transform: function(offset) {
                     if (this.options.badass) {
-                        var translateZ = (offset.x + 1) * (offset.y + 1) * 0.000001 * Math.sin(Date.now() * 0.001)
+                        var translateZ = (offset.x) * (offset.y) * 0.0006 * Math.sin(Date.now() * 0.001) - 1000;
                         return multiplyTransforms(
-                            Transform.translate(offset.x, offset.y, translateZ * 500 - 600),
+                            Transform.translate(offset.x, offset.y, translateZ),
                             Transform.rotateY(0)
                         );
                     }
