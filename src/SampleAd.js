@@ -31,7 +31,7 @@ Ad.DEFAULT_OPTIONS = {};
 function _initSampleAd() {
 
     var background = new ImageSurface({
-        content: './images/McKinsey_%26_Company_logo.png',
+        content: './images/McKinsey_%26_Company_logo.jpg',
         properties: {
             backgroundSize: 'cover'
         }
@@ -55,9 +55,10 @@ function _initSampleAd() {
         align: [0.5, 0.5],
         origin: [0.5, 0.5],
         transform: function() {
+            var diff = Date.now() * 0.002;
             var yTranslation = this.options.transitionables.yTranslation.get();
             var xTranslation = this.options.transitionables.xTranslation.get();
-            return Transform.translate(Math.cos(Date.now() * 0.002) * 800, Math.sin(Date.now() * 0.002) * 400, 0);
+            return Transform.translate(Math.cos(diff) * 1150, Math.sin(diff) * 500, 0);
         }.bind(this)
     });
 

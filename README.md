@@ -43,7 +43,7 @@ var divider = new Divider({
     row: 5,
     // Debugger view for showing the divides cutout
     debug: true,
-    // Sample modifier showing the power of the Famo.us Divider
+    // Sample animations modifier showing the power and capabilities
     badass: true
 });
 ```
