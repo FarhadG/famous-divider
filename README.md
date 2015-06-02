@@ -3,7 +3,7 @@ Famo.us Divider
 
 A simple and cool way to segment your app (any app) into as many rows and columns (bound to hardware limitations) and animate them any way you desire.
 
-That said, I may be doing a tutorial, along with the same functionality with the new Famo.us Engine (that uses WebGL), for performance, usability and features comparisons. This project is in its early stages and still has many things left to do. If something is not working or you would like a new feature, please use the issues page.
+That said, I may be doing a rewrite using the new Famo.us Engine (that uses WebGL), for performance, usability and features comparisons. This project is in its early stages and still has many things left to do. If something is not working or you would like a new feature, please use the issues page.
 
 ## Demo
 
@@ -43,7 +43,7 @@ var divider = new Divider({
     row: 5,
     // Debugger view for showing the divides cutout
     debug: true,
-    // Sample modifier showing the power of the Famo.us Divider :)
+    // Sample modifier showing the power of the Famo.us Divider
     badass: true
 });
 ```
