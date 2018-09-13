@@ -34,10 +34,10 @@ var divider = new Divider({
     // Controllers that are passed down to keep your app in sync
     transitionables: controllers.transitionables,
     // Number of rows and columns to divide your app
-    column: 5,
-    row: 5,
+    column: 10,
+    row: 10,
     // Debugger view for showing the divides cutout
-    debug: true,
+    debug: false,
     // Sample animations modifier showing the power and capabilities
     badass: true
 });

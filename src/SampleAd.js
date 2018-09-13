@@ -42,7 +42,7 @@ function _initSampleAd() {
     var circle = new Surface({
         size: [100, 100],
         properties: {
-            background: 'white',
+            background: 'red',
             borderRadius: '50%'
         }
     });
